@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Member;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreMember extends FormRequest
@@ -24,17 +25,7 @@ class StoreMember extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'voornaam' => 'required',
-            'achternaam' => 'required',
-            'geslacht' => 'required',
-            'geboortedatum' => 'required',
-            'huisnummer' => 'required',
-            'postcode' => 'required',
-            'email' => 'required',
-            'captcha' => 'required',
-            'captchaimagestring' => 'required',
-        ];
+        return array_fill_keys((new Member())->getMembersCreateRequiredFields(), 'required');
     }
 
 }

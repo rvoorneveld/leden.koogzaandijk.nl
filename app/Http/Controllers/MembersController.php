@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreMember;
+use App\Member;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
 use GuzzleHttp;
@@ -10,8 +12,8 @@ use GuzzleHttp;
 class MembersController extends Controller
 {
 
-    private $clientId = '3ORggLNhOq';
-    private $apiEndpoint = 'https://data.sportlink.com/';
+    private const REQUEST_CLIENT_ID = '3ORggLNhOq';
+    private const REQUEST_ENDPOINT = 'https://data.sportlink.com/';
 
     /**
      * @return View
@@ -19,25 +21,20 @@ class MembersController extends Controller
      */
     public function create(): View
     {
-        $response = (new GuzzleHttp\Client())->request('GET', "{$this->apiEndpoint}aanmeldenaspirantlid-form?client_id={$this->clientId}");
+        $response = (new GuzzleHttp\Client())->request(
+            'GET',
+            static::REQUEST_ENDPOINT.'aanmeldenaspirantlid-form?client_id='.static::REQUEST_CLIENT_ID
+        );
 
-        if (200 !== $response->getStatusCode() && false === empty($response->getBody())) {
+        if (200 !== $response->getStatusCode() &&
+            false === empty($response->getBody())
+        ) {
             exit;
         }
 
         return view('members.create', [
             'form' => json_decode($response->getBody(), true)['gegevens'],
-            'required' => [
-                'voornaam',
-                'achternaam',
-                'geslacht',
-                'geboortedatum',
-                'huisnummer',
-                'postcode',
-                'email',
-                'captcha',
-                'captchaimagestring',
-            ]
+            'required' => (new Member())->getMembersCreateRequiredFields(),
         ]);
     }
 
@@ -51,9 +48,16 @@ class MembersController extends Controller
         if ('production' === App::environment()) {
             $url = '';
             foreach ($request->validated() as $key => $value) {
+                if ('opmerkingen' === $key) {
+                    $value = 'AVG, expliciet akkoord gegeven op: '.Carbon::now()->toDateTimeString('yyyy-MM-dd HH:mm:ss');
+                }
                 $url .= "&{$key}={$value}";
             }
-            (new GuzzleHttp\Client())->send(new \GuzzleHttp\Psr7\Request('GET', "{$this->apiEndpoint}aanmeldenaspirantlid?client_id={$this->clientId}{$url}"));
+            (new GuzzleHttp\Client())->send(
+                new \GuzzleHttp\Psr7\Request(
+                    'GET',
+                    static::REQUEST_ENDPOINT.'aanmeldenaspirantlid?client_id='.static::REQUEST_CLIENT_ID.$url
+            ));
         }
         return redirect()->route('createMemberForm')->with('success', 'Wij hebben uw aanvraag ontvangen, wij zullen u zo spoedig mogelijk benaderen om uw aanmelding definitief te maken.');
     }

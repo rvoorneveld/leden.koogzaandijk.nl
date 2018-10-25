@@ -143,6 +143,9 @@ return [
         'email' => [
             'required' => 'Vul uw e-mailadres in',
         ],
+        'opmerkingen' => [
+            'required' => 'U dient toestemming te geven voor het gebruik van foto/videomateriaal. U kunt ten alle tijden verzoeken dit foto- of videomateriaal te verwijderen',
+        ],
         'captcha' => [
             'required' => 'Neem de beveiligingscode over',
         ],

@@ -22,7 +22,9 @@
                 @endif
 
                 <div class="form-group">
-                    @if (false === stristr($key, 'captcha'))
+                    @if ('opmerkingen' === $key)
+                        <label for="Input{{$key}}">Toestemming foto/videomateriaal</label>
+                    @elseif (false === stripos($key, 'captcha'))
                         <label for="Input{{$key}}">{{ucfirst($key)}}</label>
                     @endif
 
@@ -71,6 +73,20 @@
                             type="hidden"
                             value="{{$value}}"
                         >
+                    @break
+                    @case ('opmerkingen')
+                        <div class="form-group form-check">
+                            <input
+                                name="{{$key}}"
+                                type="checkbox"
+                                class="form-check-input"
+                                id="Input{{$key}}"
+                                value="yes"
+                            >
+                            <label class="form-check-label" for="Input{{$key}}">
+                                Als nieuw lid geef ik de vereniging toestemming voor het gebruik van foto/videomateriaal - waarop ik herkenbaar in beeld ben - voor de website, sociale mediakanalen en drukwerk (magazine, flyers, etc.). Ik kan de vereniging ten alle tijden verzoeken dit foto- of videomateriaal te verwijderen.
+                            </label>
+                        </div>
                     @break
                     @default
                         <input

@@ -134,14 +134,26 @@ return [
         'geboortedatum' => [
             'required' => 'Vul uw geboortedatum in',
         ],
+        'straatnaam' => [
+            'required' => 'Vul uw straatnaam in',
+        ],
         'huisnummer' => [
             'required' => 'Vul uw huisnummer in',
         ],
         'postcode' => [
             'required' => 'Vul uw postcode in',
         ],
+        'plaats' => [
+            'required' => 'Vul uw plaats in',
+        ],
         'email' => [
             'required' => 'Vul uw e-mailadres in',
+        ],
+        'telefoonnummer' => [
+            'required' => 'Vul uw telefoonnummer in',
+        ],
+        'iban' => [
+            'required' => 'Vul uw IBAN in',
         ],
         'opmerkingen' => [
             'required' => 'U dient toestemming te geven voor het gebruik van foto/videomateriaal. U kunt ten alle tijden verzoeken dit foto- of videomateriaal te verwijderen',

@@ -38,6 +38,7 @@
 
                         @switch ($key)
                             @case ('geslacht')
+                            @case ('bondssporten')
                                 <select
                                     class="form-control"
                                     id="Input{{$key}}"

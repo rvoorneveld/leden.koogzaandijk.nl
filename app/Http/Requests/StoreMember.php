@@ -25,7 +25,10 @@ class StoreMember extends FormRequest
      */
     public function rules(): array
     {
-        return array_fill_keys((new Member())->getMembersCreateRequiredFields(), 'required');
+        return array_merge(array_fill_keys(
+            (new Member())->getMembersCreateRequiredFields(),
+            'required'
+        ), ['generalterms' => 'required',]);
     }
 
 }

@@ -152,6 +152,9 @@ return [
         'captchaimagestring' => [
             'required' => 'Neem de beveiligingscode over',
         ],
+        'generalterms' => [
+            'required' => 'U dient akkoord te gaan met de algemene voorwaarden',
+        ],
     ],
 
     /*

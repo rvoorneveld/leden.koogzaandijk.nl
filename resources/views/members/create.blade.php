@@ -103,6 +103,23 @@
                         @endswitch
                         </div>
                     @endforeach
+                        <div class="form-group form-check">
+                            @if (true === isset($errors) && false === empty($errors->get($generalTermsErrorKey = 'generalterms')))
+                                <div class="alert alert-danger">
+                                    {{ $errors->get($generalTermsErrorKey)[0] }}
+                                </div>
+                            @endif
+                            <input
+                                name="generalterms"
+                                type="checkbox"
+                                class="form-check-input"
+                                id="generalterms"
+                                value="yes"
+                            >
+                            <label class="form-check-label" for="generalterms">
+                                Ik verklaar bekend te zijn met de voorwaarden die horen bij het lidmaatschap van KZ/Thermo4U. Deze zijn hier na te lezen.
+                            </label>
+                        </div>
                         <div class="form-group">
                             <button
                                 class="btn btn-primary"

@@ -1,0 +1,6 @@
+<h3>Welkom op de aanmeldpagina van KZ/Thermo4U.</h3>
+<p>Wat leuk dat u lid wilt worden van onze verenging! De inschrijving regelt u gemakkelijk en snel via ons online aanmeldformulier. Uw gegevens worden verstuurd naar het KNKV en komen direct terecht bij onze ledenadministratie.</p>
+<p>We vinden het belangrijk dat nieuwe leden goed geïnformeerd zijn over de voorwaarden welke horen bij het lidmaatschap, daarom hebben we ze hier (pdf-bestand) voor u op een rijtje gezet.</p>
+<p>Nadat u bent ingeschreven als nieuw lid, ontvangt u van de ledenadministratie een welkomstboekje. Hierin staat de belangrijkste informatie over onze vereniging. U wordt daarnaast geïnformeerd over de gang van zaken met betrekking tot de indeling in een team, etc.</p>
+<p>Alle informatie over teamindelingen, trainingen, wedstrijden, activiteiten voor leden, kantinediensten en ander vrijwilligerswerkzaamheden wordt verstrekt via de website <a href="http://www.koogzaandijk.nl/" target="_blank">www.koogzaandijk.nl</a>. We houden onze leden zo ook op de hoogte van het laatste nieuws.</p>
+<p>Heeft u vragen? Neem dan gerust contact op met onze secretaris via <a href="mailto:secretaris@koogzaandijk.nl">secretaris@koogzaandijk.nl</a>.</p>

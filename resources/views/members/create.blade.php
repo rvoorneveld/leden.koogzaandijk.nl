@@ -132,9 +132,7 @@
                     </form>
                 </div>
                 <div class="col-12 col-md-5 pt-5 pt-md-0">
-                    <h2>Lorum ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus neque maximus massa porttitor, vel aliquam nibh vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla a viverra risus, eu placerat sapien. Integer tortor purus, tempor eget mauris ac, bibendum dignissim nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec fringilla nibh a nunc commodo condimentum. Proin scelerisque metus sit amet est posuere, at dignissim metus feugiat. Sed a ante et dui sollicitudin mollis eu non libero.</p>
-                    <p>Sed commodo magna non aliquet accumsan. Aliquam hendrerit lorem id tellus ultrices elementum. Donec luctus maximus enim et consectetur. Nunc eget odio ut lacus iaculis tempus vitae quis est. Fusce placerat eros et dui tincidunt convallis eu non massa. Aenean feugiat, risus nec convallis viverra, odio eros eleifend nulla, ac interdum tellus nibh nec leo. Phasellus a quam quis nibh gravida scelerisque. Pellentesque congue magna vitae ex pharetra elementum. Donec ullamcorper et neque scelerisque iaculis. Curabitur sagittis varius leo, tempus accumsan metus laoreet at. Mauris tempor eget nunc vel egestas. Mauris lectus ligula, feugiat vel vestibulum eu, viverra non tortor. Suspendisse et metus id leo rutrum tincidunt at ultricies turpis. Mauris diam enim, commodo vitae elit a, fringilla consequat velit. In nisi felis, hendrerit at tristique nec, finibus ornare orci.</p>
+                    @include('members.moreinfo')
                 </div>
             </div>
         </div>

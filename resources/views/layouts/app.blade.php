@@ -9,8 +9,8 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light navbar-branding bg-light">
-        <a href="http://www.koogzaandijk.nl" target="_blank">
-            <img src="http://www.koogzaandijk.nl/assets/default/image/logo_kzthermo4u_portrait.png" alt="">
+        <a href="https://www.koogzaandijk.nl" target="_blank">
+            <img src="https://www.koogzaandijk.nl/assets/default/image/logo_kzthermo4u_portrait.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
